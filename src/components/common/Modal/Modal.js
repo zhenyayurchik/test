@@ -7,19 +7,21 @@ import {
   Button
 } from '@material-ui/core';
 
-const Modal = ({
-  open,
-  cancelText = 'Cancel',
-  okText = 'Ok',
-  modalTitle = 'Title',
-  handleOk,
-  handleCancel,
-  children
-}) => {
+const ModalComponent = (props) => {
+  const {
+    cancelText = 'Cancel',
+    okText = 'Ok',
+    modalTitle = 'Title',
+    handleOk,
+    handleCancel,
+    content,
+    open
+  } = props;
+
   return (
     <Dialog open={open} onClose={handleCancel} aria-labelledby="form-dialog-title">
       <DialogTitle id="form-dialog-title">{modalTitle}</DialogTitle>
-      <DialogContent>{children}</DialogContent>
+      <DialogContent>{content}</DialogContent>
       <DialogActions>
         <Button onClick={handleCancel} color="primary">
           {cancelText}
@@ -31,4 +33,5 @@ const Modal = ({
     </Dialog>
   );
 };
-export default Modal;
+
+export default ModalComponent;
