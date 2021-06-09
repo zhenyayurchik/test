@@ -1,0 +1,20 @@
+@import 'src/styles/variables';
+
+.btn {
+  min-width: 100px;
+  width: fit-content;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  background-color: $gray;
+  color: $white;
+  cursor: pointer;
+  -webkit-transition: box-shadow 0.2s ease-in-out;
+  -moz-transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
+  &:hover {
+    background-color: $gray-light;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px,
+      rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px,
+      rgba(240, 46, 170, 0.05) -25px 25px;
+  }
+}
